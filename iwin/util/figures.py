@@ -967,21 +967,21 @@ def figure_AvgYieldbyGID_LR(avgGY_1=None, nursery="", hue='G', hue2=None, hue3=N
         #plt.axhline(y=yi, color='gray', linestyle='--', linewidth=0.5)
         #plt.scatter(xi, yi, color='black', s=10, marker='x')
         # Define environment
-        #sns.lineplot(x,y_predicted, palette='Set1', ax=ax1, s=0.5, label='y='+str(round(pend,7))+'x + '+str(round(intercept,7)))
+        #sns.lineplot(x=x,y=y_predicted, palette='Set1', ax=ax1, s=0.5, label='y='+str(round(pend,7))+'x + '+str(round(intercept,7)))
         if (intercept>0 and m2>=m1):
-            sns.lineplot(x,y_predicted, color='orange', ax=ax1, lw=lw, 
+            sns.lineplot(x=x,y=y_predicted, color='orange', ax=ax1, lw=lw, 
                          label='Above avg Poor Env, Above avg Good Env'.format(gid))
         elif (intercept<0 and m1>=m2 ):
-            sns.lineplot(x,y_predicted, color='red', ax=ax1, lw=lw, 
+            sns.lineplot(x=x,y=y_predicted, color='red', ax=ax1, lw=lw, 
                          label='Below avg Poor Env, Below avg Good Env'.format(gid))
         elif (intercept>=0 and m1>=m2):
-            sns.lineplot(x,y_predicted, color='purple', ax=ax1, lw=lw, 
+            sns.lineplot(x=x,y=y_predicted, color='purple', ax=ax1, lw=lw, 
                          label='Above avg Poor Env, Below avg Good Env'.format(gid))
         elif (intercept<=0 and m2>=m1):
-            sns.lineplot(x,y_predicted, color='cyan', ax=ax1, lw=lw, 
+            sns.lineplot(x=x,y=y_predicted, color='cyan', ax=ax1, lw=lw, 
                          label='Below avg Poor Env, Above avg Good Env'.format(gid))
         else:
-            sns.lineplot(x,y_predicted, color='black', ax=ax1, lw=0.25)
+            sns.lineplot(x=x,y=y_predicted, color='black', ax=ax1, lw=0.25)
 
     ax1.get_legend().remove()
 
@@ -1117,19 +1117,19 @@ def figure_AvgYieldbyGID_LR(avgGY_1=None, nursery="", hue='G', hue2=None, hue3=N
             x = plotline_X.flatten()
             y_predicted = y_ransac_regression
             if (intercept>0 and m2>=m1):
-                sns.lineplot(x,y_predicted, color='orange', ax=ax3, lw=lw, 
+                sns.lineplot(x=x,y=y_predicted, color='orange', ax=ax3, lw=lw, 
                              label='Above avg Poor Env, Above avg Good Env'.format(gid))
             elif (intercept<0 and m1>=m2 ):
-                sns.lineplot(x,y_predicted, color='red', ax=ax3, lw=lw, 
+                sns.lineplot(x=x,y=y_predicted, color='red', ax=ax3, lw=lw, 
                              label='Below avg Poor Env, Below avg Good Env'.format(gid))
             elif (intercept>=0 and m1>=m2):
-                sns.lineplot(x,y_predicted, color='purple', ax=ax3, lw=lw, 
+                sns.lineplot(x=x,y=y_predicted, color='purple', ax=ax3, lw=lw, 
                              label='Above avg Poor Env, Below avg Good Env'.format(gid))
             elif (intercept<=0 and m2>=m1):
-                sns.lineplot(x,y_predicted, color='cyan', ax=ax3, lw=lw, 
+                sns.lineplot(x=x,y=y_predicted, color='cyan', ax=ax3, lw=lw, 
                              label='Below avg Poor Env, Above avg Good Env'.format(gid))
             else:
-                sns.lineplot(x,y_predicted, color='black', ax=ax3, lw=0.25)
+                sns.lineplot(x=x,y=y_predicted, color='black', ax=ax3, lw=0.25)
 
     ax3.get_legend().remove()
 
@@ -1195,19 +1195,19 @@ def figure_AvgYieldbyGID_LR(avgGY_1=None, nursery="", hue='G', hue2=None, hue3=N
             x = plotline_X.flatten()
             y_predicted = y_ransac_regression
             if (intercept>0 and m2>=m1):
-                sns.lineplot(x,y_predicted, color='orange', ax=ax4, lw=lw, 
+                sns.lineplot(x=x,y=y_predicted, color='orange', ax=ax4, lw=lw, 
                              label='Above avg Poor Env, Above avg Good Env'.format(gid))
             elif (intercept<0 and m1>=m2 ):
-                sns.lineplot(x,y_predicted, color='red', ax=ax4, lw=lw, 
+                sns.lineplot(x=x,y=y_predicted, color='red', ax=ax4, lw=lw, 
                              label='Below avg Poor Env, Below avg Good Env'.format(gid))
             elif (intercept>=0 and m1>=m2):
-                sns.lineplot(x,y_predicted, color='purple', ax=ax4, lw=lw, 
+                sns.lineplot(x=x,y=y_predicted, color='purple', ax=ax4, lw=lw, 
                              label='Above avg Poor Env, Below avg Good Env'.format(gid))
             elif (intercept<=0 and m2>=m1):
-                sns.lineplot(x,y_predicted, color='cyan', ax=ax4, lw=lw, 
+                sns.lineplot(x=x,y=y_predicted, color='cyan', ax=ax4, lw=lw, 
                              label='Below avg Poor Env, Above avg Good Env'.format(gid))
             else:
-                sns.lineplot(x,y_predicted, color='black', ax=ax4, lw=0.25)
+                sns.lineplot(x=x,y=y_predicted, color='black', ax=ax4, lw=0.25)
 
     ax4.get_legend().remove()
 

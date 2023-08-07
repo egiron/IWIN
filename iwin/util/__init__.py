@@ -796,7 +796,7 @@ def idenfifyTargetGIDs_byNurseryYear(df_filtered, nursery='ESWYT', path_to_save_
             print("{} Nursery Year: {} - y = {:.7f}x + {:.7f}".format(nursery, nyr, pend, intercept))
         y_predicted = [pend*i + intercept  for i in x]
         if (drawFigures is True):
-            l1 = sns.lineplot(x,y_predicted, color='black', ax=ax1, ls='-.', lw=1.25, label='fit')
+            l1 = sns.lineplot(x=x,y=y_predicted, color='black', ax=ax1, ls='-.', lw=1.25, label='fit')
 
         # Add linear regression by GID
         list_GIDs = []
@@ -816,11 +816,11 @@ def idenfifyTargetGIDs_byNurseryYear(df_filtered, nursery='ESWYT', path_to_save_
                 GIDs_inTarget_1.append({"Nyr":nyr, "GID":gid, "slope":pend, "intercept":intercept})
                 #print("GID: {} - y = {:.7f}x + {:.7f}".format(gid, pend, intercept))
                 if (drawFigures is True):
-                    l1 = sns.lineplot(x,y_predicted, color='red', ax=ax1, ls='-', lw=1.25, label='GID: {}'.format(gid))
+                    l1 = sns.lineplot(x=x,y=y_predicted, color='red', ax=ax1, ls='-', lw=1.25, label='GID: {}'.format(gid))
             else:
                 df.loc[((df['Nursery_Yr']==nyr) & (df['GID']==gid)), 'targetClass'] = 'Below Avg in Low Yielding Envs - Above Avg in High Yielding Envs'
                 if (drawFigures is True):
-                    l1 = sns.lineplot(x,y_predicted, color='lightblue', ax=ax1, ls='-', lw=0.25) #, label='{} line'.format(gid))
+                    l1 = sns.lineplot(x=x,y=y_predicted, color='lightblue', ax=ax1, ls='-', lw=0.25) #, label='{} line'.format(gid))
 
         # Add selected target GIDs
         df3 = df2[df2['GID'].isin(list_GIDs)].reset_index(drop=True)
@@ -909,11 +909,11 @@ def idenfifyTargetGIDs_byNurseryYear(df_filtered, nursery='ESWYT', path_to_save_
                 list_GIDs_lowTemperature.append(gid)
                 GIDs_inTarget_lowTemperature.append({"Nyr":nyr, "GID":gid, "slope":pend, "intercept":intercept})
                 if (drawFigures is True):
-                    l3 = sns.lineplot(x,y_predicted, color='blue', ax=ax3, ls='-', lw=0.9, label='Low Temp. GID: {}'.format(gid))
+                    l3 = sns.lineplot(x=x,y=y_predicted, color='blue', ax=ax3, ls='-', lw=0.9, label='Low Temp. GID: {}'.format(gid))
             else:
                 df.loc[((df['Nursery_Yr']==nyr) & (df['GID']==gid)), 'minTemperatureEnvs'] = 'Not support warmer temperature' #'Support cooler temperature'
                 if (drawFigures is True):
-                    l3 = sns.lineplot(x,y_predicted, color='lightblue', ax=ax3, ls='-', lw=0.25) #, label='{} line'.format(gid))
+                    l3 = sns.lineplot(x=x,y=y_predicted, color='lightblue', ax=ax3, ls='-', lw=0.25) #, label='{} line'.format(gid))
 
         df.loc[( (df['Nursery_Yr']==nyr) & (df['GID'].isin(list_GIDs_lowTemperature)) ), 'minTemperatureEnvs'] = 'Support warmer temperature'
         df6 = df3[df3['GID'].isin(list_GIDs_lowTemperature)].reset_index(drop=True)
@@ -956,11 +956,11 @@ def idenfifyTargetGIDs_byNurseryYear(df_filtered, nursery='ESWYT', path_to_save_
                 list_GIDs_highTemperature.append(gid)
                 GIDs_inTarget_highTemperature.append({"Nyr":nyr, "GID":gid, "slope":pend, "intercept":intercept})
                 if (drawFigures is True):
-                    l4 = sns.lineplot(x,y_predicted, color='red', ax=ax4, ls='-.', lw=1.25, label='High Temp. GID: {}'.format(gid))
+                    l4 = sns.lineplot(x=x,y=y_predicted, color='red', ax=ax4, ls='-.', lw=1.25, label='High Temp. GID: {}'.format(gid))
             else:
                 df.loc[((df['Nursery_Yr']==nyr) & (df['GID']==gid)), 'maxTemperatureEnvs'] = 'Not support warmest temperature' #'Support coolest temperature'
                 if (drawFigures is True):
-                    l4 = sns.lineplot(x,y_predicted, color='lightblue', ax=ax4, ls='-', lw=0.25) #, label='{} line'.format(gid))
+                    l4 = sns.lineplot(x=x,y=y_predicted, color='lightblue', ax=ax4, ls='-', lw=0.25) #, label='{} line'.format(gid))
 
         df.loc[( ((df['Nursery_Yr']==nyr) & df['GID'].isin(list_GIDs_highTemperature)) ), 'maxTemperatureEnvs'] = 'Support warmest temperature'
         #df7 = df3[df3['GID'].isin(list_GIDs_highTemperature)].groupby(['GID'], as_index=False).agg({'normYieldBLUE95Perc':'mean', 'Season_TMAX_mean':'mean'}).sort_values(['normYieldBLUE95Perc'], ascending=False).reset_index(drop=True)
@@ -1328,7 +1328,7 @@ def displayGenotypeSensitivitybyWeather(df_final, gid, yFld='Grain Yield', nurse
     intercept=par[0][1]
     print("Vegetative y = {:.7f}x + {:.7f}".format(pend, intercept))
     y_predicted = [pend*i + intercept  for i in x]
-    l1 = sns.lineplot(x,y_predicted, color=GScolors['Vegetative'], ax=ax1, lw=2.25, label='Vegetative')
+    l1 = sns.lineplot(x=x,y=y_predicted, color=GScolors['Vegetative'], ax=ax1, lw=2.25, label='Vegetative')
 
     # Heading 
     x = df['Heading'].to_numpy()
@@ -1339,7 +1339,7 @@ def displayGenotypeSensitivitybyWeather(df_final, gid, yFld='Grain Yield', nurse
     intercept=par[0][1]
     print("Heading y = {:.7f}x + {:.7f}".format(pend, intercept))
     y_predicted = [pend*i + intercept  for i in x]
-    l1 = sns.lineplot(x,y_predicted, color=GScolors['Heading'], ax=ax1, lw=2.25, label='Heading')
+    l1 = sns.lineplot(x=x,y=y_predicted, color=GScolors['Heading'], ax=ax1, lw=2.25, label='Heading')
 
     # Grain filling 
     x = df['Grain Filling'].to_numpy()
@@ -1350,7 +1350,7 @@ def displayGenotypeSensitivitybyWeather(df_final, gid, yFld='Grain Yield', nurse
     intercept=par[0][1]
     print("Grain Filling y = {:.7f}x + {:.7f}".format(pend, intercept))
     y_predicted = [pend*i + intercept  for i in x]
-    l1 = sns.lineplot(x,y_predicted, color=GScolors['Grain Filling'], ax=ax1, lw=2.25, label='Grain Filling')
+    l1 = sns.lineplot(x=x,y=y_predicted, color=GScolors['Grain Filling'], ax=ax1, lw=2.25, label='Grain Filling')
 
     plt.legend(bbox_to_anchor=(0.5, -0.2), loc="center", ncol=2,  borderaxespad=0,fontsize=10)
     #plt.legend(loc='upper left')
@@ -1426,7 +1426,7 @@ def displayTempVsGY_inGrowStagesforAllGIDs(df_filtered, df_HT, nursery='ESWYT', 
             intercept=par[0][1]
             #print("Vegetative y = {:.7f}x + {:.7f}".format(pend, intercept))
             y_predicted = [pend*i + intercept  for i in x]
-            l1 = sns.lineplot(x,y_predicted, color=GScolors['Vegetative'], ax=ax, lw=lw2, label='Vegetative')
+            l1 = sns.lineplot(x=x,y=y_predicted, color=GScolors['Vegetative'], ax=ax, lw=lw2, label='Vegetative')
 
             # Heading 
             x = df['Heading'].to_numpy()
@@ -1437,7 +1437,7 @@ def displayTempVsGY_inGrowStagesforAllGIDs(df_filtered, df_HT, nursery='ESWYT', 
             intercept=par[0][1]
             #print("Heading y = {:.7f}x + {:.7f}".format(pend, intercept))
             y_predicted = [pend*i + intercept  for i in x]
-            l1 = sns.lineplot(x,y_predicted, color=GScolors['Heading'], ax=ax, lw=lw2, label='Heading')
+            l1 = sns.lineplot(x=x,y=y_predicted, color=GScolors['Heading'], ax=ax, lw=lw2, label='Heading')
 
             # Grain filling 
             x = df['Grain Filling'].to_numpy()
@@ -1448,7 +1448,7 @@ def displayTempVsGY_inGrowStagesforAllGIDs(df_filtered, df_HT, nursery='ESWYT', 
             intercept=par[0][1]
             #print("Grain Filling y = {:.7f}x + {:.7f}".format(pend, intercept))
             y_predicted = [pend*i + intercept  for i in x]
-            l1 = sns.lineplot(x,y_predicted, color=GScolors['Grain Filling'], ax=ax, lw=lw2, label='Grain Filling')
+            l1 = sns.lineplot(x=x,y=y_predicted, color=GScolors['Grain Filling'], ax=ax, lw=lw2, label='Grain Filling')
 
         #
         # ------------------------------
@@ -1605,7 +1605,7 @@ def drawTemperaturebyGrowthStage_acrossYears(df_data=None, nursery='NURSERY', te
         #print(f"{phases_labels[0]} change over time: {change_Period:.2f} °C")
         y_predicted = [pend*i + intercept  for i in x]
         if (bxplot is False):
-            l1 = sns.lineplot(x,y_predicted, color=GScolors[phases_labels[gs]], ls='--', lw=0.25, 
+            l1 = sns.lineplot(x=x,y=y_predicted, color=GScolors[phases_labels[gs]], ls='--', lw=0.25, 
                               label=f'Temperature trend ({phases_labels[gs]})', ax=ax)
             #l1 = sns.regplot(x,y_predicted, color=GScolors[phases_labels[gs]], label=f'{phases_labels[gs]}', ax=ax)
         pos_x = 0.01
@@ -1788,7 +1788,7 @@ def drawTemperaturebyGrowthStage_acrossYears_v2(df_data=None, nursery='NURSERY',
         #print(f"{phases_labels[0]} change over time: {change_Period:.2f} °C")
         y_predicted = [pend*i + intercept  for i in x]
         if (bxplot is False):
-            l1 = sns.lineplot(x,y_predicted, color=GScolors[phases_labels[gs]], ls='--', lw=0.25, 
+            l1 = sns.lineplot(x=x,y=y_predicted, color=GScolors[phases_labels[gs]], ls='--', lw=0.25, 
                               label=f'Temperature trend ({phases_labels[gs]})', ax=ax)
             #l1 = sns.regplot(x,y_predicted, color=GScolors[phases_labels[gs]], label=f'{phases_labels[gs]}', ax=ax)
         pos_x = 0.01
@@ -2006,7 +2006,7 @@ def drawRegCoefficientbyGrowthStage_acrossYears(df_data=None, nursery='NURSERY',
         #print("{} y = {:.7f}x + {:.7f}".format(phases_labels[gs], pend, intercept))
         change_Period = (pend*np.nanmax(x) + intercept) - (pend*np.nanmin(x) + intercept)
         y_predicted = [pend*i + intercept  for i in x]
-        l1 = sns.lineplot(x,y_predicted, color='black', ls='--', lw=1.8, label=f'{trendVar} trend (decreasing)', ax=ax)
+        l1 = sns.lineplot(x=x,y=y_predicted, color='black', ls='--', lw=1.8, label=f'{trendVar} trend (decreasing)', ax=ax)
 
         # Add linear regressions from splitYear to present
         df_Yrs = df[((df['Year']==splitYear) | (df['Year']==years[-1]))] # A partir del año XXXXX se nota las mejoras en variedades resistentes a altas temperaturas 
@@ -2019,7 +2019,7 @@ def drawRegCoefficientbyGrowthStage_acrossYears(df_data=None, nursery='NURSERY',
         #print("{} y = {:.7f}x + {:.7f}".format(phases_labels[gs], pend, intercept))
         change_Period = (pend*np.nanmax(x) + intercept) - (pend*np.nanmin(x) + intercept)
         y_predicted = [pend*i + intercept  for i in x]
-        l1 = sns.lineplot(x,y_predicted, color='blue', ls='-', lw=1.8, label=f'{trendVar} trend (increasing)', ax=ax)
+        l1 = sns.lineplot(x=x,y=y_predicted, color='blue', ls='-', lw=1.8, label=f'{trendVar} trend (increasing)', ax=ax)
         # Add coefficient text
         pos_x = 0.01
         pos_x2 = 0.98
@@ -2087,7 +2087,7 @@ def drawRegCoefficientbyGrowthStage_acrossYears(df_data=None, nursery='NURSERY',
         #print(f"{phases_labels[0]} change over time: {change_Period:.2f} °C")
         y_predicted = [pend*i + intercept  for i in x]
         if (bxplot is False):
-            l1 = sns.lineplot(x,y_predicted, color='black', ls='-', lw=0.35, label=f'Temperature trend', ax=ax)
+            l1 = sns.lineplot(x=x,y=y_predicted, color='black', ls='-', lw=0.35, label=f'Temperature trend', ax=ax)
         pos_x = 0.01
         pos_x2 = 0.98
         pos_y = 1.15 #0.2 # Top 0.95
@@ -2263,7 +2263,7 @@ def drawCompareGYvsTMAXbyGS(df_data=None, GIDs2compare=None, nursery='NURSERY', 
         change_Period = (pend*np.nanmax(x) + intercept) - (pend*np.nanmin(x) + intercept)
         #print(f"{phases_labels[0]} change over time: {change_Period:.2f} °C")
         y_predicted = [pend*i + intercept  for i in x]
-        l1 = sns.lineplot(x,y_predicted, color=GScolors[phases_labels[gs]], ls='-', lw=lw, ax=ax) #label=f'Temperature trend ({phases_labels[gs]})', 
+        l1 = sns.lineplot(x=x,y=y_predicted, color=GScolors[phases_labels[gs]], ls='-', lw=lw, ax=ax) #label=f'Temperature trend ({phases_labels[gs]})', 
         #l1 = sns.regplot(x,y_predicted, color=GScolors[phases_labels[gs]], label=f'{phases_labels[gs]}', ax=ax)
         pos_x = 0.01
         pos_x2 = 0.98
