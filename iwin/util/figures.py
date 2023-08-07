@@ -99,7 +99,7 @@ def chart_compareResults(df_result=None, fld1=None, fld2=None, alpha=.75, s=15, 
         if not os.path.isdir(figures_path):
             os.makedirs(figures_path)
         fig.savefig(os.path.join(figures_path,"{}_{}_{}.pdf".format(fname, title.replace(' ',''), hoy)), 
-                    bbox_inches='tight', orientation='portrait', papertype='a4', pad_inches=0.5, dpi=300)
+                    bbox_inches='tight', orientation='portrait',  pad_inches=0.5, dpi=300)
 
     if (saveFig==True and (fmt=='jpg' or fmt=='png')):
         hoy = datetime.now().strftime('%Y%m%d')
@@ -373,7 +373,7 @@ def chart_compareYieldResults(df_result=None, title="iPAR Yield model", alpha=.9
         if not os.path.isdir(figures_path):
             os.makedirs(figures_path)
         fig.savefig(os.path.join(figures_path, '{}_{}_comparison_{}.pdf'.format(fname, title.replace(' ', '_'), hoy)), 
-                    bbox_inches='tight', orientation='portrait', papertype='a4', pad_inches=0.5, dpi=300)
+                    bbox_inches='tight', orientation='portrait',  pad_inches=0.5, dpi=300)
 
 
     if (saveFig==True and (fmt=='jpg' or fmt=='png')):
@@ -654,7 +654,7 @@ def chart_compareDaysFromStagesResults(df_result=None, title="iPAR Yield model",
         if not os.path.isdir(figures_path):
             os.makedirs(figures_path)
         fig.savefig(os.path.join(figures_path, '{}_{}_comparison_{}.pdf'.format(fname, title.replace(' ', '_'), hoy)), 
-                    bbox_inches='tight', orientation='portrait', papertype='a4', pad_inches=0.5, dpi=300)
+                    bbox_inches='tight', orientation='portrait',  pad_inches=0.5, dpi=300)
 
 
     if (saveFig==True and (fmt=='jpg' or fmt=='png')):
@@ -767,7 +767,7 @@ def chartObsYieldTrendsAllNurseries(df_N=None, title='Observed yield trend', s=1
             os.makedirs(figures_path)
         fig.savefig(os.path.join(figures_path, 'IWIN_GxE_{}_{}-{}_{}.pdf'.format(title.replace(' ', '_'), 
                                                                                   minYear, maxYear, hoy)), 
-                    bbox_inches='tight', orientation='portrait', papertype='a4', pad_inches=0.5, dpi=300)
+                    bbox_inches='tight', orientation='portrait',  pad_inches=0.5, dpi=300)
 
     if (saveFig==True and (fmt=='jpg' or fmt=='png')):
         hoy = datetime.now().strftime('%Y%m%d')
@@ -851,7 +851,7 @@ def chartAvgObsYieldTrendsAllNurseries(df_N=None, title='Average observed yield 
             os.makedirs(figures_path)
         fig.savefig(os.path.join(figures_path, 'IWIN_GxE_{}_{}-{}_mean_{}.pdf'.format(title.replace(' ', '_'), 
                                                                                   minYear, maxYear, hoy)), 
-                    bbox_inches='tight', orientation='portrait', papertype='a4', pad_inches=0.5, dpi=300)
+                    bbox_inches='tight', orientation='portrait',  pad_inches=0.5, dpi=300)
 
     if (saveFig==True and (fmt=='jpg' or fmt=='png')):
         hoy = datetime.now().strftime('%Y%m%d')
@@ -1268,7 +1268,7 @@ def figure_AvgYieldbyGID_LR(avgGY_1=None, nursery="", hue='G', hue2=None, hue3=N
             os.makedirs(figures_path)
         fig.savefig(os.path.join(figures_path, 'IWIN_GxE_WheatLines_GenSelxEnv_LRm1m2_{}_{}.pdf'
                                  .format(nursery.replace(' ', '_'), hoy)), bbox_inches='tight', orientation='portrait', 
-                    papertype='a4', pad_inches=0.5, dpi=300)
+                     pad_inches=0.5, dpi=300)
 
     if (saveFig==True and (fmt=='jpg' or fmt=='png')):
         hoy = datetime.now().strftime('%Y%m%d')
@@ -1609,7 +1609,7 @@ def figure_AvgYieldbyGID_classify(avgGY_1=None, avgGY_2=None, df_countOfGIDs=Non
             os.makedirs(figures_path)
         fig.savefig(os.path.join(figures_path, 'IWIN_GxE_WheatLines_GenSelxEnv_classifm3_{}_{}.pdf'
                                  .format(nursery.replace(' ', '_'), hoy)), bbox_inches='tight', orientation='portrait', 
-                    papertype='a4', pad_inches=0.5, dpi=300)
+                     pad_inches=0.5, dpi=300)
 
     if (saveFig==True and (fmt=='jpg' or fmt=='png')):
         hoy = datetime.now().strftime('%Y%m%d')
@@ -1945,7 +1945,7 @@ def figure_AvgYieldbyGID_classify_v2(avgGY_1=None, avgGY_2=None, df_countOfGIDs=
             os.makedirs(figures_path)
         fig.savefig(os.path.join(figures_path, 'IWIN_GxE_WheatLines_GenSelxEnv_classifm3_{}_{}.pdf'
                                  .format(nursery.replace(' ', '_'), hoy)), bbox_inches='tight', orientation='portrait', 
-                    papertype='a4', pad_inches=0.5, dpi=300)
+                     pad_inches=0.5, dpi=300)
 
     if (saveFig==True and (fmt=='jpg' or fmt=='png')):
         hoy = datetime.now().strftime('%Y%m%d')
@@ -3100,7 +3100,7 @@ def plot_AvgYieldbyGID_classify(avgGY_1=None, selGIDs_m3=None, numGIDsOfOcurrenc
             os.makedirs(figures_path)
         fig.savefig(os.path.join(figures_path, 'IWIN_GxE_WheatLines_GenSelxEnv_classifm3_{}_{}.pdf'
                                  .format(nursery.replace(' ', '_'), hoy)), bbox_inches='tight', orientation='portrait', 
-                    papertype='a4', pad_inches=0.5, dpi=300)
+                     pad_inches=0.5, dpi=300)
 
     if (saveFig==True and (fmt=='jpg' or fmt=='png')):
         hoy = datetime.now().strftime('%Y%m%d')
@@ -3194,7 +3194,7 @@ def figure_AvgYieldbyGID_combineMethods(df_GY=None, fld1="AvGYxLocOcc", fld2="Av
             os.makedirs(figures_path)
         fig.savefig(os.path.join(figures_path, 'IWIN_GxE_selGen_{}_finalenvironments_{}.pdf'
                                  .format(nursery.replace(' ', '_'), hoy)), bbox_inches='tight', orientation='portrait', 
-                    papertype='a4', pad_inches=0.5, dpi=300)
+                     pad_inches=0.5, dpi=300)
 
     if (saveFig==True and (fmt=='jpg' or fmt=='png')):
         hoy = datetime.now().strftime('%Y%m%d')
@@ -3323,7 +3323,7 @@ def _clusterYieldEnvironments(df_selGen=None, nurseryGroup='ESWYT',
             os.makedirs(figures_path)
         fig.savefig(os.path.join(figures_path, 'IWIN_GxE_selGen_{}_clusterenvironments_{}.pdf'
                                  .format(nurseryGroup.replace(' ', '_'), hoy)), bbox_inches='tight', orientation='portrait', 
-                    papertype='a4', pad_inches=0.5, dpi=300)
+                     pad_inches=0.5, dpi=300)
 
     if (saveFig==True and (fmt=='jpg' or fmt=='png')):
         hoy = datetime.now().strftime('%Y%m%d')
@@ -3462,7 +3462,7 @@ def clusterYieldEnvironments(df_selGen=None, nurseryGroup=['ESWYT'], fld1="AvGYx
                 os.makedirs(figures_path)
             fig.savefig(os.path.join(figures_path, 'IWIN_GxE_selGen_{}_clusterenvironments_{}.pdf'
                                      .format(nurseryGroup.replace(' ', '_'), hoy)), bbox_inches='tight', orientation='portrait', 
-                        papertype='a4', pad_inches=0.5, dpi=300)
+                         pad_inches=0.5, dpi=300)
 
         if (saveFig==True and (fmt=='jpg' or fmt=='png')):
             hoy = datetime.now().strftime('%Y%m%d')
@@ -3787,7 +3787,7 @@ def clusterYieldEnvironments(df_selGen=None, nurseryGroup=['ESWYT'], fld1="AvGYx
                 os.makedirs(figures_path)
             fig.savefig(os.path.join(figures_path, 'IWIN_GxE_selGen_clusterenvironments_{}.pdf'
                                      .format(hoy)), bbox_inches='tight', orientation='portrait', 
-                        papertype='a4', pad_inches=0.5, dpi=300)
+                         pad_inches=0.5, dpi=300)
 
         if (saveFig==True and (fmt=='jpg' or fmt=='png')):
             hoy = datetime.now().strftime('%Y%m%d')
@@ -3865,7 +3865,7 @@ def chartObsYieldTrendsByNursery(df_pheno=None, GenSel=None, ngrp='ESWYT',
             os.makedirs(figures_path)
         fig.savefig(os.path.join(figures_path, "IWIN_GxE_{}_{}_{}-{}_{}.pdf"
                                  .format(ngrp, title.replace(' ', '_'), minYear, maxYear, hoy)), 
-                    bbox_inches='tight', orientation='portrait', papertype='a4', pad_inches=0.5, dpi=300)
+                    bbox_inches='tight', orientation='portrait',  pad_inches=0.5, dpi=300)
 
     if (saveFig==True and (fmt=='jpg' or fmt=='png')):
         hoy = datetime.now().strftime('%Y%m%d')
@@ -3936,7 +3936,7 @@ def chartErrorBar_ObsYieldTrendsByNursery(df_pheno=None, GenSel=None, ngrp='ESWY
             os.makedirs(figures_path)
         fig.savefig(os.path.join(figures_path, "IWIN_GxE_{}_GenSel_{}_{}-{}_{}_{}.pdf"
                                  .format(ngrp, title.replace(' ', '_'), minYear, maxYear, t, hoy)), 
-                    bbox_inches='tight', orientation='portrait', papertype='a4', pad_inches=0.5, dpi=300)
+                    bbox_inches='tight', orientation='portrait',  pad_inches=0.5, dpi=300)
 
     if (saveFig==True and (fmt=='jpg' or fmt=='png')):
         hoy = datetime.now().strftime('%Y%m%d')
@@ -4034,7 +4034,7 @@ def chartObsYieldTrends(df_GY=None, selGIDs=None, ngrp='ESWYT', n=1, title='Obse
             os.makedirs(figures_path)
         fig.savefig(os.path.join(figures_path, "IWIN_GxE_{}_GenSel_{}_{}-{}_mean_{}.pdf"
                                  .format(ngrp, title.replace(' ', '_'), minYear, maxYear, hoy)), 
-                    bbox_inches='tight', orientation='portrait', papertype='a4', pad_inches=0.5, dpi=300)
+                    bbox_inches='tight', orientation='portrait',  pad_inches=0.5, dpi=300)
 
     if (saveFig==True and (fmt=='jpg' or fmt=='png')):
         hoy = datetime.now().strftime('%Y%m%d')

@@ -367,7 +367,7 @@ def missingData(df_GE=None, title='IWIN GxE\nMissing data', dirname='./', fmt='p
             if not os.path.isdir(figures_path):
                 os.makedirs(figures_path)
             fig.savefig(os.path.join(figures_path,"{}_{}.pdf".format(title.replace(' ',''), hoy)), 
-                        bbox_inches='tight', orientation='portrait', papertype='a4', pad_inches=0.5, dpi=300)
+                        bbox_inches='tight', orientation='portrait',  pad_inches=0.5, dpi=300)
 
         if (saveFig==True and (fmt=='jpg' or fmt=='png')):
             hoy = datetime.now().strftime('%Y%m%d')
@@ -1115,7 +1115,7 @@ def idenfifyTargetGIDs_byNurseryYear(df_filtered, nursery='ESWYT', path_to_save_
                 os.makedirs(output_path, exist_ok=True)
 
             fig.savefig(os.path.join(output_path, "{}_TargetGIDs_Nyr{}_{}.pdf".format(nursery, nyr, hoy)), 
-                        bbox_inches='tight', orientation='portrait', papertype='a4', 
+                        bbox_inches='tight', orientation='portrait',  
                         edgecolor='none', transparent=False,
                         pad_inches=0.5, dpi=300)
 
@@ -1243,7 +1243,7 @@ def displayMap_spatialDistSelectedGIDs(df_gids, nursery='ESWYT', path_to_save_re
             fig.savefig(os.path.join(path_to_save_results, "{}_map_selected_GIDs_{}.png".format(nursery, hoy)), 
                         alpha=False, transparent=False, dpi=300)
             fig.savefig(os.path.join(path_to_save_results, "{}_map_selected_GIDs_{}.pdf".format(nursery,hoy)), 
-                        bbox_inches='tight', orientation='portrait', papertype='a4', 
+                        bbox_inches='tight', orientation='portrait',  
                         edgecolor='none', transparent=False,
                         pad_inches=0.5, dpi=300)
         fig.show()
@@ -1360,7 +1360,7 @@ def displayGenotypeSensitivitybyWeather(df_final, gid, yFld='Grain Yield', nurse
         fig.savefig(os.path.join(path_to_save_results, "{}_TempVsGY_GID{}_{}.png".format(nursery, gid, hoy)), 
                     alpha=False, transparent=False, dpi=300)
         fig.savefig(os.path.join(path_to_save_results, "{}_TempVsGY_GID{}_{}.pdf".format(nursery, gid, hoy)), 
-                    bbox_inches='tight', orientation='portrait', papertype='a4', 
+                    bbox_inches='tight', orientation='portrait',  
                     edgecolor='none', transparent=False,
                     pad_inches=0.5, dpi=300)
     fig.show()
@@ -1514,7 +1514,7 @@ def displayTempVsGY_inGrowStagesforAllGIDs(df_filtered, df_HT, nursery='ESWYT', 
             fig.savefig(os.path.join(path_to_save_results, "{}_TargetGIDs_ClimatexGrowthstage_part_{}_{}.pdf".format(nursery, pg+1, hoy)), 
                         alpha=False, transparent=False, dpi=300)
             fig.savefig(os.path.join(path_to_save_results, "{}_TargetGIDs_ClimatexGrowthstage_part_{}_{}.pdf".format(nursery, pg+1, hoy)), 
-                        bbox_inches='tight', orientation='portrait', papertype='a4', 
+                        bbox_inches='tight', orientation='portrait',  
                         edgecolor='none', transparent=False, pad_inches=0.5, dpi=300)
 
         fig.show()
@@ -1692,7 +1692,7 @@ def drawTemperaturebyGrowthStage_acrossYears(df_data=None, nursery='NURSERY', te
         os.makedirs(figures_path)
     if (saveFig is True and fmt=='pdf'):
         fig.savefig(os.path.join(figures_path,"{}_{}_{}.{}".format(nursery, fname, hoy, fmt)), 
-                    bbox_inches='tight', orientation='portrait', papertype='a4', 
+                    bbox_inches='tight', orientation='portrait',  
                     edgecolor='none', transparent=False, pad_inches=0.5, dpi=300)
 
     if (saveFig==True and (fmt=='jpg' or fmt=='png')):
@@ -1881,7 +1881,7 @@ def drawTemperaturebyGrowthStage_acrossYears_v2(df_data=None, nursery='NURSERY',
         os.makedirs(figures_path)
     if (saveFig is True and fmt=='pdf'):
         fig.savefig(os.path.join(figures_path,"{}_{}_{}.{}".format(nursery, fname, hoy, fmt)), 
-                    bbox_inches='tight', orientation='portrait', papertype='a4', 
+                    bbox_inches='tight', orientation='portrait',  
                     edgecolor='none', transparent=False, pad_inches=0.5, dpi=300)
 
     if (saveFig==True and (fmt=='jpg' or fmt=='png')):
@@ -2187,7 +2187,7 @@ def drawRegCoefficientbyGrowthStage_acrossYears(df_data=None, nursery='NURSERY',
         os.makedirs(figures_path)
     if (saveFig is True and fmt=='pdf'):
         fig.savefig(os.path.join(figures_path,figures_path,"{}_{}_{}.{}".format(nursery, fname, hoy, fmt)), 
-                    bbox_inches='tight', orientation='portrait', papertype='a4', 
+                    bbox_inches='tight', orientation='portrait',  
                     edgecolor='none', transparent=False, pad_inches=0.5, dpi=300)
 
     if (saveFig==True and (fmt=='jpg' or fmt=='png')):
@@ -2343,7 +2343,7 @@ def drawCompareGYvsTMAXbyGS(df_data=None, GIDs2compare=None, nursery='NURSERY', 
         os.makedirs(figures_path)
     if (saveFig is True and fmt=='pdf'):
         fig.savefig(os.path.join(figures_path,figures_path,"{}_{}_{}.{}".format(nursery, fname, hoy, fmt)), 
-                    bbox_inches='tight', orientation='portrait', papertype='a4', 
+                    bbox_inches='tight', orientation='portrait',  
                     edgecolor='none', transparent=False, pad_inches=0.5, dpi=300)
 
     if (saveFig==True and (fmt=='jpg' or fmt=='png')):
