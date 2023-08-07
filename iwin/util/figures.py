@@ -76,8 +76,8 @@ def chart_compareResults(df_result=None, fld1=None, fld2=None, alpha=.75, s=15, 
     ax1.axline((0, 0), slope=1, color='#444', ls="-", linewidth=0.75, zorder=0, label="line 1:1") #c=".5",
     maxlim = int(max(df[fld1].max(), df[fld2].max())) + xy_lim
     g1.set(xlim=(0, maxlim), ylim=(0, maxlim))
-    g1.grid(b=True, which='major', color='#d3d3d3', linewidth=0.5)
-    g1.grid(b=True, which='minor', color='#d3d3d3', linewidth=0.5)
+    g1.grid(visible=True, which='major', color='#d3d3d3', linewidth=0.5)
+    g1.grid(visible=True, which='minor', color='#d3d3d3', linewidth=0.5)
     ax1.set_axisbelow(True)
     ax1.set_title('iPAR Yield model - IWIN\n{}'.format(title), fontsize=15)
     ax1.set_xlabel(xlabel, fontsize=12)
@@ -198,8 +198,8 @@ def chart_compareYieldResults(df_result=None, title="iPAR Yield model", alpha=.9
     ax1.axline((0, 0), slope=1, color='#444', ls="-", linewidth=0.75, zorder=0, label="line 1:1")
     maxlim = int(max(df[fld1].max(), df[fld2].max())) + xy_lim
     g1.set(xlim=(0, maxlim), ylim=(0, maxlim))
-    g1.grid(b=True, which='major', color='#d3d3d3', linewidth=0.5)
-    g1.grid(b=True, which='minor', color='#d3d3d3', linewidth=0.5)
+    g1.grid(visible=True, which='major', color='#d3d3d3', linewidth=0.5)
+    g1.grid(visible=True, which='minor', color='#d3d3d3', linewidth=0.5)
     ax1.set_axisbelow(True)
     # Add hztal and vertical lines
     ax1.axvline(df[fld1].mean(), ls='--', c='red', linewidth=1, label="Mean Observed Yield")
@@ -240,8 +240,8 @@ def chart_compareYieldResults(df_result=None, title="iPAR Yield model", alpha=.9
     ax2.axline((0, 0), slope=1, color='#444', ls="-", linewidth=0.75, zorder=0, label="line 1:1")
     maxlim = int(max(df2[fld1].max(), df2[fld3].max())) + xy_lim
     g2.set(xlim=(0, maxlim), ylim=(0, maxlim))
-    g2.grid(b=True, which='major', color='#d3d3d3', linewidth=0.5)
-    g2.grid(b=True, which='minor', color='#d3d3d3', linewidth=0.5)
+    g2.grid(visible=True, which='major', color='#d3d3d3', linewidth=0.5)
+    g2.grid(visible=True, which='minor', color='#d3d3d3', linewidth=0.5)
     ax2.set_axisbelow(True)
     # Add hztal and vertical lines
     ax2.axvline(df[fld1].mean(), ls='--', c='red', linewidth=1, label="Mean Observed Yield")
@@ -279,8 +279,8 @@ def chart_compareYieldResults(df_result=None, title="iPAR Yield model", alpha=.9
     ax3.axline((0, 0), slope=1, color='#444', ls="-", linewidth=0.75, zorder=0, label="line 1:1")
     maxlim = int(max(df3[fld1].max(), df3[fld4].max())) + xy_lim
     g3.set(xlim=(0, maxlim), ylim=(0, maxlim))
-    g3.grid(b=True, which='major', color='#d3d3d3', linewidth=0.5)
-    g3.grid(b=True, which='minor', color='#d3d3d3', linewidth=0.5)
+    g3.grid(visible=True, which='major', color='#d3d3d3', linewidth=0.5)
+    g3.grid(visible=True, which='minor', color='#d3d3d3', linewidth=0.5)
     ax3.set_axisbelow(True)
     # Add hztal and vertical lines
     ax3.axvline(df[fld1].mean(), ls='--', c='red', linewidth=1, label="Mean Observed Yield")
@@ -320,8 +320,8 @@ def chart_compareYieldResults(df_result=None, title="iPAR Yield model", alpha=.9
     ax4.axline((0, 0), slope=1, color='#444', ls="-", linewidth=0.75, zorder=0, label="line 1:1")
     maxlim = int(max(df4[fld1].max(), df4[fld5].max())) + xy_lim
     g4.set(xlim=(0, maxlim), ylim=(0, maxlim))
-    g4.grid(b=True, which='major', color='#d3d3d3', linewidth=0.5)
-    g4.grid(b=True, which='minor', color='#d3d3d3', linewidth=0.5)
+    g4.grid(visible=True, which='major', color='#d3d3d3', linewidth=0.5)
+    g4.grid(visible=True, which='minor', color='#d3d3d3', linewidth=0.5)
     ax4.set_axisbelow(True)
     # Add hztal and vertical lines
     ax4.axvline(df[fld1].mean(), ls='--', c='red', linewidth=1, label="Mean Observed Yield")
@@ -478,8 +478,8 @@ def chart_compareDaysFromStagesResults(df_result=None, title="iPAR Yield model",
     ax1.axline((0, 0), slope=1, color='#444', ls="-", linewidth=0.75, zorder=0, label="line 1:1")
     maxlim = int(max(df[fld1].max(), df[fld2].max())) + xy_lim
     g1.set(xlim=(0, maxlim), ylim=(0, maxlim))
-    g1.grid(b=True, which='major', color='#d3d3d3', linewidth=0.5)
-    g1.grid(b=True, which='minor', color='#d3d3d3', linewidth=0.5)
+    g1.grid(visible=True, which='major', color='#d3d3d3', linewidth=0.5)
+    g1.grid(visible=True, which='minor', color='#d3d3d3', linewidth=0.5)
     ax1.set_axisbelow(True)
     # Add hztal and vertical lines
     ax1.axhline(df[fld1].mean(), ls='--', c='red', linewidth=1, label="Mean Estimated Days")
@@ -520,8 +520,8 @@ def chart_compareDaysFromStagesResults(df_result=None, title="iPAR Yield model",
     ax2.axline((0, 0), slope=1, color='#444', ls="-", linewidth=0.75, zorder=0, label="line 1:1")
     maxlim = int(max(df2[fld1].max(), df2[fld3].max())) + xy_lim
     g2.set(xlim=(0, maxlim), ylim=(0, maxlim))
-    g2.grid(b=True, which='major', color='#d3d3d3', linewidth=0.5)
-    g2.grid(b=True, which='minor', color='#d3d3d3', linewidth=0.5)
+    g2.grid(visible=True, which='major', color='#d3d3d3', linewidth=0.5)
+    g2.grid(visible=True, which='minor', color='#d3d3d3', linewidth=0.5)
     ax2.set_axisbelow(True)
     # Add hztal and vertical lines
     ax2.axhline(df2[fld1].mean(), ls='--', c='red', linewidth=1, label="Mean Estimated Days")
@@ -560,8 +560,8 @@ def chart_compareDaysFromStagesResults(df_result=None, title="iPAR Yield model",
     ax3.axline((0, 0), slope=1, color='#444', ls="-", linewidth=0.75, zorder=0, label="line 1:1")
     maxlim = int(max(df3[fld1].max(), df3[fld4].max())) + xy_lim
     g3.set(xlim=(0, maxlim), ylim=(0, maxlim))
-    g3.grid(b=True, which='major', color='#d3d3d3', linewidth=0.5)
-    g3.grid(b=True, which='minor', color='#d3d3d3', linewidth=0.5)
+    g3.grid(visible=True, which='major', color='#d3d3d3', linewidth=0.5)
+    g3.grid(visible=True, which='minor', color='#d3d3d3', linewidth=0.5)
     ax3.set_axisbelow(True)
     # Add hztal and vertical lines
     ax3.axhline(df3[fld1].mean(), ls='--', c='red', linewidth=1, label="Mean Estimated Days")
@@ -601,8 +601,8 @@ def chart_compareDaysFromStagesResults(df_result=None, title="iPAR Yield model",
     ax4.axline((0, 0), slope=1, color='#444', ls="-", linewidth=0.75, zorder=0, label="line 1:1")
     maxlim = int(max(df4[fld5].max(), df4[fld6].max())) + xy_lim
     g4.set(xlim=(0, maxlim), ylim=(0, maxlim))
-    g4.grid(b=True, which='major', color='#d3d3d3', linewidth=0.5)
-    g4.grid(b=True, which='minor', color='#d3d3d3', linewidth=0.5)
+    g4.grid(visible=True, which='major', color='#d3d3d3', linewidth=0.5)
+    g4.grid(visible=True, which='minor', color='#d3d3d3', linewidth=0.5)
     ax4.set_axisbelow(True)
     # Add hztal and vertical lines
     ax4.axhline(df4[fld5].mean(), ls='--', c='red', linewidth=1, label="Mean Estimated Days")
@@ -717,8 +717,8 @@ def chartObsYieldTrendsAllNurseries(df_N=None, title='Observed yield trend', s=1
     fig,ax1=plt.subplots(nrows=1,ncols=1,figsize=(10,6))
     g1 = sns.scatterplot(x='YearofSow', y='ObsYield', data=df, marker='o', s=s, alpha=alpha, 
                          palette=paleta, hue='Nursery',  ax=ax1);
-    g1.grid(b=True, which='major', color='#d3d3d3', linewidth=0.5)
-    g1.grid(b=True, which='minor', color='#d3d3d3', linewidth=0.5)
+    g1.grid(visible=True, which='major', color='#d3d3d3', linewidth=0.5)
+    g1.grid(visible=True, which='minor', color='#d3d3d3', linewidth=0.5)
     ax1.set_axisbelow(True)
     minlim = minYear - 1
     maxlim = maxYear + 2
@@ -819,8 +819,8 @@ def chartAvgObsYieldTrendsAllNurseries(df_N=None, title='Average observed yield 
     #ax1.scatter(df['YearofSow'],df['ObsYield'],c=df['Nursery'],alpha=0.3,s=5)
     g1 = sns.scatterplot(x='YearofSow', y='ObsYield', data=df, marker='o', s=s, alpha=alpha, 
                          palette=paleta, hue='Nursery',  ax=ax1);
-    g1.grid(b=True, which='major', color='#d3d3d3', linewidth=0.5)
-    g1.grid(b=True, which='minor', color='#d3d3d3', linewidth=0.5)
+    g1.grid(visible=True, which='major', color='#d3d3d3', linewidth=0.5)
+    g1.grid(visible=True, which='minor', color='#d3d3d3', linewidth=0.5)
     ax1.set_axisbelow(True)
     minlim = minYear - 1
     maxlim = maxYear + 2
@@ -924,8 +924,8 @@ def figure_AvgYieldbyGID_LR(avgGY_1=None, nursery="", hue='G', hue2=None, hue3=N
     ax1.axline((0, 0), slope=1, color='#444', ls="--", linewidth=1.25, zorder=0, label="line 1:1") #c=".5",
     maxlim_1 = int(max(df[fld1].max(), df[fld2].max())) + 1
     g1.set(xlim=(0, maxlim_1), ylim=(0, maxlim_1))
-    g1.grid(b=True, which='major', color='#d3d3d3', linewidth=0.5)
-    g1.grid(b=True, which='minor', color='#d3d3d3', linewidth=0.5)
+    g1.grid(visible=True, which='major', color='#d3d3d3', linewidth=0.5)
+    g1.grid(visible=True, which='minor', color='#d3d3d3', linewidth=0.5)
     ax1.set_axisbelow(True)
     # Add hztal and vertical lines
     ax1.axhline(df[fld1].mean(), ls='--', c='red', linewidth=1, label="Mean Yield (GID)")
@@ -1002,8 +1002,8 @@ def figure_AvgYieldbyGID_LR(avgGY_1=None, nursery="", hue='G', hue2=None, hue3=N
     ax2.axline((0, 0), slope=1, color='#444', ls="--", linewidth=1.25, zorder=0, label="line 1:1") #c=".5",
     maxlim = int(max(df2[fld1].max(), df2[fld2].max())) + 1
     g2.set(xlim=(0, maxlim), ylim=(0, maxlim))
-    g2.grid(b=True, which='major', color='#d3d3d3', linewidth=0.5)
-    g2.grid(b=True, which='minor', color='#d3d3d3', linewidth=0.5)
+    g2.grid(visible=True, which='major', color='#d3d3d3', linewidth=0.5)
+    g2.grid(visible=True, which='minor', color='#d3d3d3', linewidth=0.5)
     ax2.set_axisbelow(True)
     # Add hztal and vertical lines
     ax2.axhline(df2[fld1].mean(), ls='--', c='red', linewidth=1, label="Mean Yield (GID)")
@@ -1074,8 +1074,8 @@ def figure_AvgYieldbyGID_LR(avgGY_1=None, nursery="", hue='G', hue2=None, hue3=N
     ax3.axline((0, 0), slope=1, color='#444', ls="--", linewidth=1.25, zorder=0, label="line 1:1") #c=".5",
     maxlim = int(max(df3[fld1].max(), df3[fld2].max())) + 1
     g3.set(xlim=(0, maxlim), ylim=(0, maxlim))
-    g3.grid(b=True, which='major', color='#d3d3d3', linewidth=0.5)
-    g3.grid(b=True, which='minor', color='#d3d3d3', linewidth=0.5)
+    g3.grid(visible=True, which='major', color='#d3d3d3', linewidth=0.5)
+    g3.grid(visible=True, which='minor', color='#d3d3d3', linewidth=0.5)
     ax3.set_axisbelow(True)
     # Add hztal and vertical lines
     ax3.axhline(df3[fld1].mean(), ls='--', c='red', linewidth=1, label="Mean Yield (GID)")
@@ -1150,8 +1150,8 @@ def figure_AvgYieldbyGID_LR(avgGY_1=None, nursery="", hue='G', hue2=None, hue3=N
     ax4.axline((0, 0), slope=1, color='#444', ls="--", linewidth=1.25, zorder=0, label="line 1:1") #c=".5",
     maxlim = int(max(df4[fld1].max(), df4[fld2].max())) + 1
     g4.set(xlim=(0, maxlim), ylim=(0, maxlim))
-    g4.grid(b=True, which='major', color='#d3d3d3', linewidth=0.5)
-    g4.grid(b=True, which='minor', color='#d3d3d3', linewidth=0.5)
+    g4.grid(visible=True, which='major', color='#d3d3d3', linewidth=0.5)
+    g4.grid(visible=True, which='minor', color='#d3d3d3', linewidth=0.5)
     ax4.set_axisbelow(True)
     # Add hztal and vertical lines
     ax4.axhline(df4[fld1].mean(), ls='--', c='red', linewidth=1, label="Mean Yield (GID)")
@@ -1351,8 +1351,8 @@ def figure_AvgYieldbyGID_classify(avgGY_1=None, avgGY_2=None, df_countOfGIDs=Non
     ax1.axline((0, 0), slope=1, color='#444', ls="-", linewidth=0.75, zorder=0, label="line 1:1") #c=".5",
     maxlim = int(max(df[fld1].max(), df[fld2].max())) + 1
     g1.set(xlim=(0, maxlim), ylim=(0, maxlim))
-    g1.grid(b=True, which='major', color='#d3d3d3', linewidth=0.5)
-    g1.grid(b=True, which='minor', color='#d3d3d3', linewidth=0.5)
+    g1.grid(visible=True, which='major', color='#d3d3d3', linewidth=0.5)
+    g1.grid(visible=True, which='minor', color='#d3d3d3', linewidth=0.5)
     ax1.set_axisbelow(True)
     # Add hztal and vertical lines
     ax1.axhline(df[fld1].mean(), ls='--', c='red', linewidth=1, label="Mean Yield (GID)")
@@ -1395,8 +1395,8 @@ def figure_AvgYieldbyGID_classify(avgGY_1=None, avgGY_2=None, df_countOfGIDs=Non
     ax2.axline((0, 0), slope=1, color='#444', ls="-", linewidth=0.75, zorder=0, label="line 1:1") #c=".5",
     maxlim = int(max(df[fld1].max(), df[fld2].max())) + 1
     g2.set(xlim=(0, maxlim), ylim=(0, maxlim))
-    g2.grid(b=True, which='major', color='#d3d3d3', linewidth=0.5)
-    g2.grid(b=True, which='minor', color='#d3d3d3', linewidth=0.5)
+    g2.grid(visible=True, which='major', color='#d3d3d3', linewidth=0.5)
+    g2.grid(visible=True, which='minor', color='#d3d3d3', linewidth=0.5)
     ax2.set_axisbelow(True)
     # Add hztal and vertical lines
     ax2.axhline(df[fld1].mean(), ls='--', c='red', linewidth=1, label="Mean Yield (GID)")
@@ -1436,8 +1436,8 @@ def figure_AvgYieldbyGID_classify(avgGY_1=None, avgGY_2=None, df_countOfGIDs=Non
     ax3.axline((0, 0), slope=1, color='#444', ls="-", linewidth=0.75, zorder=0, label="line 1:1") #c=".5",
     maxlim = int(max(df3a[fld1].max(), df3a[fld2].max())) + 1
     g3.set(xlim=(0, maxlim), ylim=(0, maxlim))
-    g3.grid(b=True, which='major', color='#d3d3d3', linewidth=0.5)
-    g3.grid(b=True, which='minor', color='#d3d3d3', linewidth=0.5)
+    g3.grid(visible=True, which='major', color='#d3d3d3', linewidth=0.5)
+    g3.grid(visible=True, which='minor', color='#d3d3d3', linewidth=0.5)
     ax3.set_axisbelow(True)
     # Add hztal and vertical lines
     ax3.axhline(df[fld1].mean(), ls='--', c='red', linewidth=1, label="Mean Yield (GID)")
@@ -1477,8 +1477,8 @@ def figure_AvgYieldbyGID_classify(avgGY_1=None, avgGY_2=None, df_countOfGIDs=Non
     #                      s=35, lw=1, label='# Occurrences (Good in bad environment)', ax=ax3);
     # maxlim = int(max(df3[fld3].max(), df3[fld4].max())) + 1
     # g3.set(xlim=(0, maxlim), ylim=(0, maxlim))
-    # g3.grid(b=True, which='major', color='#d3d3d3', linewidth=0.5)
-    # g3.grid(b=True, which='minor', color='#d3d3d3', linewidth=0.5)
+    # g3.grid(visible=True, which='major', color='#d3d3d3', linewidth=0.5)
+    # g3.grid(visible=True, which='minor', color='#d3d3d3', linewidth=0.5)
     
     # # Add texts
     # if (dispTxt is True):
@@ -1525,8 +1525,8 @@ def figure_AvgYieldbyGID_classify(avgGY_1=None, avgGY_2=None, df_countOfGIDs=Non
                          s=35, lw=1, ax=ax4 ); #label='# Occurrences',
     maxlim = int(max(df5[fld3].max(), df5[fld4].max())) + 1
     #g4.set(xlim=(0, maxlim), ylim=(0, maxlim))
-    g4.grid(b=True, which='major', color='#d3d3d3', linewidth=0.5, zorder=0)
-    g4.grid(b=True, which='minor', color='#d3d3d3', linewidth=0.5, zorder=0)
+    g4.grid(visible=True, which='major', color='#d3d3d3', linewidth=0.5, zorder=0)
+    g4.grid(visible=True, which='minor', color='#d3d3d3', linewidth=0.5, zorder=0)
     ax4.set_axisbelow(True)
     
     # Add texts
@@ -1724,8 +1724,8 @@ def figure_AvgYieldbyGID_classify_v2(avgGY_1=None, avgGY_2=None, df_countOfGIDs=
     ax1.axline((0, 0), slope=1, color='#444', ls="-", linewidth=0.75, zorder=0, label="line 1:1") #c=".5",
     maxlim = int(max(df[fld1].max(), df[fld2].max())) + 1
     g1.set(xlim=(0, maxlim), ylim=(0, maxlim))
-    g1.grid(b=True, which='major', color='#d3d3d3', linewidth=0.5)
-    g1.grid(b=True, which='minor', color='#d3d3d3', linewidth=0.5)
+    g1.grid(visible=True, which='major', color='#d3d3d3', linewidth=0.5)
+    g1.grid(visible=True, which='minor', color='#d3d3d3', linewidth=0.5)
     ax1.set_axisbelow(True)
     # Add hztal and vertical lines
     ax1.axhline(df[fld1].mean(), ls='--', c='red', linewidth=1, label="Mean Yield (GID)")
@@ -1767,8 +1767,8 @@ def figure_AvgYieldbyGID_classify_v2(avgGY_1=None, avgGY_2=None, df_countOfGIDs=
     ax2.axline((0, 0), slope=1, color='#444', ls="-", linewidth=0.75, zorder=0, label="line 1:1") #c=".5",
     maxlim = int(max(df[fld1].max(), df[fld2].max())) + 1
     g2.set(xlim=(0, maxlim), ylim=(0, maxlim))
-    g2.grid(b=True, which='major', color='#d3d3d3', linewidth=0.5)
-    g2.grid(b=True, which='minor', color='#d3d3d3', linewidth=0.5)
+    g2.grid(visible=True, which='major', color='#d3d3d3', linewidth=0.5)
+    g2.grid(visible=True, which='minor', color='#d3d3d3', linewidth=0.5)
     ax2.set_axisbelow(True)
     # Add hztal and vertical lines
     ax2.axhline(df[fld1].mean(), ls='--', c='red', linewidth=1, label="Mean Yield (GID)")
@@ -1812,8 +1812,8 @@ def figure_AvgYieldbyGID_classify_v2(avgGY_1=None, avgGY_2=None, df_countOfGIDs=
     #maxlim_y = int(max(df3a[fld2].max(), df3a[fld2].max())) + 1.2 #plot_params['limspan']
     #g3.set(xlim=(minlim_x, maxlim_x), ylim=(minlim_y, maxlim_y))
     
-    g3.grid(b=True, which='major', color='#d3d3d3', linewidth=0.5)
-    g3.grid(b=True, which='minor', color='#d3d3d3', linewidth=0.5)
+    g3.grid(visible=True, which='major', color='#d3d3d3', linewidth=0.5)
+    g3.grid(visible=True, which='minor', color='#d3d3d3', linewidth=0.5)
     ax3.set_axisbelow(True)
     # Add hztal and vertical lines
     ax3.axhline(df[fld1].mean(), ls='--', c='red', linewidth=1, label="Mean Yield (GID)")
@@ -1861,8 +1861,8 @@ def figure_AvgYieldbyGID_classify_v2(avgGY_1=None, avgGY_2=None, df_countOfGIDs=
                          s=35, lw=1, ax=ax4 ); #label='# Occurrences',
     maxlim = int(max(df5[fld3].max(), df5[fld4].max())) + 1
     #g4.set(xlim=(0, maxlim), ylim=(0, maxlim))
-    g4.grid(b=True, which='major', color='#d3d3d3', linewidth=0.5, zorder=0)
-    g4.grid(b=True, which='minor', color='#d3d3d3', linewidth=0.5, zorder=0)
+    g4.grid(visible=True, which='major', color='#d3d3d3', linewidth=0.5, zorder=0)
+    g4.grid(visible=True, which='minor', color='#d3d3d3', linewidth=0.5, zorder=0)
     ax4.set_axisbelow(True)
     
     # Add texts
@@ -3146,8 +3146,8 @@ def figure_AvgYieldbyGID_combineMethods(df_GY=None, fld1="AvGYxLocOcc", fld2="Av
     ax1.axline((0, 0), slope=1, color='#444', ls="--", linewidth=1.25, zorder=0, label="line 1:1") #c=".5",
     maxlim = int(max(df[fld1].max(), df[fld2].max())) + 1
     g1.set(xlim=(0, maxlim), ylim=(0, maxlim))
-    g1.grid(b=True, which='major', color='#d3d3d3', linewidth=0.5)
-    g1.grid(b=True, which='minor', color='#d3d3d3', linewidth=0.5)
+    g1.grid(visible=True, which='major', color='#d3d3d3', linewidth=0.5)
+    g1.grid(visible=True, which='minor', color='#d3d3d3', linewidth=0.5)
     ax1.set_axisbelow(True)
     ax1.set_title('{}'.format(nursery), fontsize=16)
     ax1.set_xlabel('Average Yield of site-year [${tha^{-1}}$]', fontsize=15)
@@ -3271,8 +3271,8 @@ def _clusterYieldEnvironments(df_selGen=None, nurseryGroup='ESWYT',
     ax1.axline((0, 0), slope=1, color='#444', ls="-", linewidth=0.75, zorder=0, label="line 1:1") #c=".5",
     maxlim = int(max(df[fld1].max(), df[fld2].max())) + 2
     g1.set(xlim=(0, maxlim), ylim=(0, maxlim))
-    g1.grid(b=True, which='major', color='#d3d3d3', linewidth=0.5)
-    g1.grid(b=True, which='minor', color='#d3d3d3', linewidth=0.5)
+    g1.grid(visible=True, which='major', color='#d3d3d3', linewidth=0.5)
+    g1.grid(visible=True, which='minor', color='#d3d3d3', linewidth=0.5)
     ax1.set_axisbelow(True)
     ax1.set_title('{}'.format(title), fontsize=16)
     ax1.set_xlabel(r'Avg. Observed Yield [${tha^{-1}}$] (Loc-Occ)', fontsize=14)
@@ -3410,8 +3410,8 @@ def clusterYieldEnvironments(df_selGen=None, nurseryGroup=['ESWYT'], fld1="AvGYx
         ax1.axline((0, 0), slope=1, color='#444', ls="-", linewidth=0.75, zorder=0, label="line 1:1") #c=".5",
         maxlim = int(max(df[fld1].max(), df[fld2].max())) + 2
         g1.set(xlim=(0, maxlim), ylim=(0, maxlim))
-        g1.grid(b=True, which='major', color='#d3d3d3', linewidth=0.5)
-        g1.grid(b=True, which='minor', color='#d3d3d3', linewidth=0.5)
+        g1.grid(visible=True, which='major', color='#d3d3d3', linewidth=0.5)
+        g1.grid(visible=True, which='minor', color='#d3d3d3', linewidth=0.5)
         ax1.set_axisbelow(True)
         ax1.set_title('{}'.format(title), fontsize=16)
         ax1.set_xlabel(r'Avg. Observed Yield [${tha^{-1}}$] (Loc-Occ)', fontsize=14)
@@ -3638,8 +3638,8 @@ def clusterYieldEnvironments(df_selGen=None, nurseryGroup=['ESWYT'], fld1="AvGYx
         ax1.axline((0, 0), slope=1, color='#444', ls="-", linewidth=0.75, zorder=0, label="line 1:1") #c=".5",
         maxlim = int(max(df[fld1].max(), df[fld2].max())) + xy_lim
         g1.set(xlim=(0, maxlim), ylim=(0, maxlim))
-        g1.grid(b=True, which='major', color='#d3d3d3', linewidth=0.5)
-        g1.grid(b=True, which='minor', color='#d3d3d3', linewidth=0.5)
+        g1.grid(visible=True, which='major', color='#d3d3d3', linewidth=0.5)
+        g1.grid(visible=True, which='minor', color='#d3d3d3', linewidth=0.5)
         ax1.set_axisbelow(True)
         ax1.set_title('{}'.format(title), fontsize=fonts_titles)
         ax1.set_xlabel(r'Avg. Observed Yield [${tha^{-1}}$] (Loc-Occ)', fontsize=fonts_axes)
@@ -3675,8 +3675,8 @@ def clusterYieldEnvironments(df_selGen=None, nurseryGroup=['ESWYT'], fld1="AvGYx
         ax2.axline((0, 0), slope=1, color='#444', ls="-", linewidth=0.75, zorder=0, label="line 1:1") #c=".5",
         maxlim = int(max(df2[fld1].max(), df2[fld2].max())) + xy_lim
         g2.set(xlim=(0, maxlim), ylim=(0, maxlim))
-        g2.grid(b=True, which='major', color='#d3d3d3', linewidth=0.5)
-        g2.grid(b=True, which='minor', color='#d3d3d3', linewidth=0.5)
+        g2.grid(visible=True, which='major', color='#d3d3d3', linewidth=0.5)
+        g2.grid(visible=True, which='minor', color='#d3d3d3', linewidth=0.5)
         ax2.set_axisbelow(True)
         ax2.set_title('{}'.format(title2), fontsize=fonts_titles)
         ax2.set_xlabel(r'Avg. Observed Yield [${tha^{-1}}$] (Loc-Occ)', fontsize=fonts_axes)
@@ -3707,8 +3707,8 @@ def clusterYieldEnvironments(df_selGen=None, nurseryGroup=['ESWYT'], fld1="AvGYx
         ax3.axline((0, 0), slope=1, color='#444', ls="-", linewidth=0.75, zorder=0, label="line 1:1") #c=".5",
         maxlim = int(max(df3[fld1].max(), df3[fld2].max())) + xy_lim
         g3.set(xlim=(0, maxlim), ylim=(0, maxlim))
-        g3.grid(b=True, which='major', color='#d3d3d3', linewidth=0.5)
-        g3.grid(b=True, which='minor', color='#d3d3d3', linewidth=0.5)
+        g3.grid(visible=True, which='major', color='#d3d3d3', linewidth=0.5)
+        g3.grid(visible=True, which='minor', color='#d3d3d3', linewidth=0.5)
         ax3.set_axisbelow(True)
         ax3.set_title('{}'.format(title3), fontsize=fonts_titles)
         ax3.set_xlabel(r'Avg. Observed Yield [${tha^{-1}}$] (Loc-Occ)', fontsize=fonts_axes)
@@ -3739,8 +3739,8 @@ def clusterYieldEnvironments(df_selGen=None, nurseryGroup=['ESWYT'], fld1="AvGYx
         ax4.axline((0, 0), slope=1, color='#444', ls="-", linewidth=0.75, zorder=0, label="line 1:1") #c=".5",
         maxlim = int(max(df4[fld1].max(), df4[fld2].max())) + xy_lim
         g4.set(xlim=(0, maxlim), ylim=(0, maxlim))
-        g4.grid(b=True, which='major', color='#d3d3d3', linewidth=0.5)
-        g4.grid(b=True, which='minor', color='#d3d3d3', linewidth=0.5)
+        g4.grid(visible=True, which='major', color='#d3d3d3', linewidth=0.5)
+        g4.grid(visible=True, which='minor', color='#d3d3d3', linewidth=0.5)
         ax4.set_axisbelow(True)
         ax4.set_title('{}'.format(title4), fontsize=fonts_titles)
         ax4.set_xlabel(r'Avg. Observed Yield [${tha^{-1}}$] (Loc-Occ)', fontsize=fonts_axes)
@@ -3830,8 +3830,8 @@ def chartObsYieldTrendsByNursery(df_pheno=None, GenSel=None, ngrp='ESWYT',
     fig,ax1=plt.subplots(nrows=1,ncols=1,figsize=(10,6))
     g1 = sns.scatterplot(x='YearofSow', y='ObsYield', data=df, marker=marker, s=s, alpha=alpha, 
                          hue='loc_code',  ax=ax1);
-    g1.grid(b=True, which='major', color='#d3d3d3', linewidth=0.5)
-    g1.grid(b=True, which='minor', color='#d3d3d3', linewidth=0.5)
+    g1.grid(visible=True, which='major', color='#d3d3d3', linewidth=0.5)
+    g1.grid(visible=True, which='minor', color='#d3d3d3', linewidth=0.5)
     ax1.set_axisbelow(True)
     minlim = minYear - 1
     maxlim = maxYear + 2
@@ -3988,8 +3988,8 @@ def chartObsYieldTrends(df_GY=None, selGIDs=None, ngrp='ESWYT', n=1, title='Obse
                          #color=colors[n], 
                          palette=paleta, 
                          hue='Nursery',  ax=ax1);
-    g1.grid(b=True, which='major', color='#d3d3d3', linewidth=0.5)
-    g1.grid(b=True, which='minor', color='#d3d3d3', linewidth=0.5)
+    g1.grid(visible=True, which='major', color='#d3d3d3', linewidth=0.5)
+    g1.grid(visible=True, which='minor', color='#d3d3d3', linewidth=0.5)
     ax1.set_axisbelow(True)
     minlim = minYear - 1
     maxlim = maxYear + 2

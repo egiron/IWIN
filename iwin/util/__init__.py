@@ -350,8 +350,8 @@ def missingData(df_GE=None, title='IWIN GxE\nMissing data', dirname='./', fmt='p
         fig, (ax1) = plt.subplots(figsize=(10,6))
         #fig.subplots_adjust(right=0.55)
         g1 = sns.barplot(x='Trait', y='% of Total Values', data=mis_val_table, alpha=0.75, color="gray", lw=0, ax=ax1);
-        g1.grid(b=True, which='major', color='#d3d3d3', linewidth=0.5)
-        g1.grid(b=True, which='minor', color='#d3d3d3', linewidth=0.5)
+        g1.grid(visible=True, which='major', color='#d3d3d3', linewidth=0.5)
+        g1.grid(visible=True, which='minor', color='#d3d3d3', linewidth=0.5)
         ax1.set_axisbelow(True)
         ax1.set_title(title, fontsize=18)
         ax1.set_xlabel(xlabel, fontsize=14)
@@ -776,8 +776,8 @@ def idenfifyTargetGIDs_byNurseryYear(df_filtered, nursery='ESWYT', path_to_save_
             #                     hue='Country',style='Country', marker='o', s=20, alpha=0.85, ax=ax1, label='Country');
             g1 = sns.scatterplot(x='Quantiles95(GRAIN_YIELD_BLUEs)', y='normYieldBLUE95Perc', data=df2, 
                              color='#cccccc', style='Country', marker='+', s=30, alpha=0.45, ax=ax1, label='Country')
-            g1.grid(b=True, which='major', color='#d3d3d3', linewidth=0.5)
-            g1.grid(b=True, which='minor', color='#d3d3d3', linewidth=0.5)
+            g1.grid(visible=True, which='major', color='#d3d3d3', linewidth=0.5)
+            g1.grid(visible=True, which='minor', color='#d3d3d3', linewidth=0.5)
             ax1.set_axisbelow(True)
             # Add hztal and vertical lines
             ax1.axhline(df2['normYieldBLUE95Perc'].mean(), ls='--', c='#444444', zorder=0, linewidth=1, label="Avg. Norm Mean Yield")
@@ -840,8 +840,8 @@ def idenfifyTargetGIDs_byNurseryYear(df_filtered, nursery='ESWYT', path_to_save_
         if (drawFigures is True):
             g3 = sns.scatterplot(x='LocOccCntry', y='normYieldBLUE95Perc', data=df2, 
                              color='#cccccc', style='Country', marker='+', s=30, alpha=0.45, ax=ax2, label='Country')
-            g3.grid(b=True, which='major', color='#d3d3d3', linewidth=0.5)
-            g3.grid(b=True, which='minor', color='#d3d3d3', linewidth=0.5)
+            g3.grid(visible=True, which='major', color='#d3d3d3', linewidth=0.5)
+            g3.grid(visible=True, which='minor', color='#d3d3d3', linewidth=0.5)
             ax2.set_axisbelow(True)
             if (len(df2['LocOccCntry'].unique())>50):
                 ax2.tick_params(axis='x', rotation=90, labelsize=6.5)
@@ -884,8 +884,8 @@ def idenfifyTargetGIDs_byNurseryYear(df_filtered, nursery='ESWYT', path_to_save_
         if (drawFigures is True):
             g7 = sns.scatterplot(x='Season_TMIN_mean', y='normYieldBLUE95Perc', data=df2, 
                              color='#cccccc', style='Country', marker='+', s=30, alpha=0.45, ax=ax3, label='Country')
-            g7.grid(b=True, which='major', color='#d3d3d3', linewidth=0.5)
-            g7.grid(b=True, which='minor', color='#d3d3d3', linewidth=0.5)
+            g7.grid(visible=True, which='major', color='#d3d3d3', linewidth=0.5)
+            g7.grid(visible=True, which='minor', color='#d3d3d3', linewidth=0.5)
             ax3.set_axisbelow(True)
             # Add hztal and vertical lines
             ax3.axhline(df2['normYieldBLUE95Perc'].mean(), ls='--', c='#444444', zorder=0, linewidth=1, label="Avg. Norm Mean Yield")
@@ -932,8 +932,8 @@ def idenfifyTargetGIDs_byNurseryYear(df_filtered, nursery='ESWYT', path_to_save_
         if (drawFigures is True):
             g8 = sns.scatterplot(x=fld_fg4, y='normYieldBLUE95Perc', data=df2, 
                              color='#cccccc', style='Country', marker='+', s=30, alpha=0.45, ax=ax4, label='Country')
-            g8.grid(b=True, which='major', color='#d3d3d3', linewidth=0.5)
-            g8.grid(b=True, which='minor', color='#d3d3d3', linewidth=0.5)
+            g8.grid(visible=True, which='major', color='#d3d3d3', linewidth=0.5)
+            g8.grid(visible=True, which='minor', color='#d3d3d3', linewidth=0.5)
             ax4.set_axisbelow(True)
             # Add hztal and vertical lines
             ax4.axhline(df2['normYieldBLUE95Perc'].mean(), ls='--', c='#444444', zorder=0, linewidth=1, label="Avg. Norm Mean Yield")
@@ -1307,8 +1307,8 @@ def displayGenotypeSensitivitybyWeather(df_final, gid, yFld='Grain Yield', nurse
                          alpha=0.75, ec=GScolors['Grain Filling'], fc='none', marker="o", 
                          s=120, lw=0.35,  ax=ax1, label='Selected observation (Grain Filling)')
     
-    g1.grid(b=True, which='major', color='#d3d3d3', linewidth=0.5)
-    g1.grid(b=True, which='minor', color='#d3d3d3', linewidth=0.5)
+    g1.grid(visible=True, which='major', color='#d3d3d3', linewidth=0.5)
+    g1.grid(visible=True, which='minor', color='#d3d3d3', linewidth=0.5)
     ax1.set_axisbelow(True)
     
     title1=f'Temperature vs Grain Yield in 3 growth stages (GID{gid})'
@@ -1408,8 +1408,8 @@ def displayTempVsGY_inGrowStagesforAllGIDs(df_filtered, df_HT, nursery='ESWYT', 
                                  alpha=0.95, ec=GScolors['Grain Filling'], fc='none', marker="o", 
                                  s=s2, lw=0.35,  ax=ax, label='Selected observation (Grain Filling)')
 
-            g1.grid(b=True, which='major', color='#d3d3d3', linewidth=0.5)
-            g1.grid(b=True, which='minor', color='#d3d3d3', linewidth=0.5)
+            g1.grid(visible=True, which='major', color='#d3d3d3', linewidth=0.5)
+            g1.grid(visible=True, which='minor', color='#d3d3d3', linewidth=0.5)
             ax.set_axisbelow(True)
 
             # ----------------------
@@ -1584,8 +1584,8 @@ def drawTemperaturebyGrowthStage_acrossYears(df_data=None, nursery='NURSERY', te
         else: 
             g1 = sns.scatterplot(x=fldX, y=df[phases_labels[gs]], data=df, hue=None, marker='o', color=GScolors[phases_labels[gs]],
                                  s=s, lw=lw, alpha=alpha, ax=ax, label=phases_labels[gs])
-        g1.grid(b=True, which='major', color='#d3d3d3', linewidth=0.5)
-        g1.grid(b=True, which='minor', color='#d3d3d3', linewidth=0.5)
+        g1.grid(visible=True, which='major', color='#d3d3d3', linewidth=0.5)
+        g1.grid(visible=True, which='minor', color='#d3d3d3', linewidth=0.5)
         ax.set_axisbelow(True)
         
         if (bxplot is False):
@@ -1767,8 +1767,8 @@ def drawTemperaturebyGrowthStage_acrossYears_v2(df_data=None, nursery='NURSERY',
         else: 
             g1 = sns.scatterplot(x=fldX, y=df[phases_labels[gs]], data=df, hue=None, marker='o', color=GScolors[phases_labels[gs]],
                                  s=s, lw=lw, alpha=alpha, ax=ax, label=phases_labels[gs])
-        g1.grid(b=True, which='major', color='#d3d3d3', linewidth=0.5)
-        g1.grid(b=True, which='minor', color='#d3d3d3', linewidth=0.5)
+        g1.grid(visible=True, which='major', color='#d3d3d3', linewidth=0.5)
+        g1.grid(visible=True, which='minor', color='#d3d3d3', linewidth=0.5)
         ax.set_axisbelow(True)
         
         if (bxplot is False):
@@ -2044,8 +2044,8 @@ def drawRegCoefficientbyGrowthStage_acrossYears(df_data=None, nursery='NURSERY',
                 ax.text(pos_x2, pos_y, r"$\bf{:.2f} t/ha per °C$ decrease".format(change_Period), fontsize=fontsize, 
                         ha='right', va='top', transform=ax.transAxes)
         #
-        g1.grid(b=True, which='major', color='#d3d3d3', linewidth=0.5)
-        g1.grid(b=True, which='minor', color='#d3d3d3', linewidth=0.5)
+        g1.grid(visible=True, which='major', color='#d3d3d3', linewidth=0.5)
+        g1.grid(visible=True, which='minor', color='#d3d3d3', linewidth=0.5)
         ax.set_axisbelow(True)
         if (gs<3):
             ax.set_xlabel('')
@@ -2066,8 +2066,8 @@ def drawRegCoefficientbyGrowthStage_acrossYears(df_data=None, nursery='NURSERY',
         else: 
             g1 = sns.scatterplot(x=fldX, y=df[phases_labels[gs]], data=df, hue=None, marker='o', color=GScolors[phases_labels[gs]],
                                  s=s, lw=lw, alpha=alpha, ax=ax, label=phases_labels[gs])
-        g1.grid(b=True, which='major', color='#d3d3d3', linewidth=0.5)
-        g1.grid(b=True, which='minor', color='#d3d3d3', linewidth=0.5)
+        g1.grid(visible=True, which='major', color='#d3d3d3', linewidth=0.5)
+        g1.grid(visible=True, which='minor', color='#d3d3d3', linewidth=0.5)
         ax.set_axisbelow(True)
         
         if (bxplot is False):
@@ -2244,8 +2244,8 @@ def drawCompareGYvsTMAXbyGS(df_data=None, GIDs2compare=None, nursery='NURSERY', 
     def createFigCompareGYvsTMAXbyGS(df, gid, ngid, ax, gs=0, s=10, s2=30, lw=1.0, alpha=0.85):
         g1 = sns.scatterplot(x=df[phases_labels[gs]], y='Grain Yield', data=df, hue=None, marker='o', color=GScolors[phases_labels[gs]],
                                  s=s, lw=lw, alpha=alpha, ax=ax, label=phases_labels[gs])
-        g1.grid(b=True, which='major', color='#d3d3d3', linewidth=0.5)
-        g1.grid(b=True, which='minor', color='#d3d3d3', linewidth=0.5)
+        g1.grid(visible=True, which='major', color='#d3d3d3', linewidth=0.5)
+        g1.grid(visible=True, which='minor', color='#d3d3d3', linewidth=0.5)
         ax.set_axisbelow(True)
         ax.set_xlabel('')
         ax.set_ylabel('')
