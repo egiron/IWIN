@@ -1,4 +1,4 @@
-# iPAR Yidel Model Package
+# iPAR Yield Model Package
 
 This is a small package for estimating wheat yield. it estimates yield under non-stressed conditions as a function of iPAR, temperature and solar radiation.
 
